@@ -38,19 +38,103 @@
 
     <div class="main-content">
         <header>
+            <div class="nome-usuario">
+                <h2><i class="fas fa-align-justify"></i></h2>
+            </div><!--nome usuario-->
+
             <div class="pesquisa-campo">
                 <div class="icone-pesquisa">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div><form><input type="text"></form>
+                </div>
+                <form><input type="text"></form>
             </div><!--pesquisa-campo-->
+
+            <div class="icone-alerta">
+                <p>2</p>
+                <i class="fas fa-bell"></i>
+            </div><!--icone alerta-->
 
             <div class="clear"></div><!--clear-->
         </header>
-        
+
+        <div class="content1">
+            <div class="panel">
+                <h2>Olá Sandro, Seja Bem-Vindo.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, est. Sed unde tempore at a officia,
+                    officiis nulla atque sequi voluptatem nisi numquam magni nihil doloremque aut rem veniam ipsam!</p>
+            </div><!--panel-->
+
+            <div style="width: 49%; margin-right: 1%;" class="panel">
+                <h2>Olá Sandro, Seja Bem-Vindo.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, est. Sed unde tempore at a officia,
+                    officiis nulla atque sequi voluptatem nisi numquam magni nihil doloremque aut rem veniam ipsam!</p>
+            </div><!--panel-->
+
+            <div style="width: 49%; margin-left: 1%;" class="panel">
+                <h2>Olá Sandro, Seja Bem-Vindo.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, est. Sed unde tempore at a officia,
+                    officiis nulla atque sequi voluptatem nisi numquam magni nihil doloremque aut rem veniam ipsam!</p>
+            </div><!--panel-->
+            <div class="clear"></div><!--clear-->
+
+            <div class="panel">
+                <h2>Olá Sandro, Seja Bem-Vindo.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, est. Sed unde tempore at a officia,
+                    officiis nulla atque sequi voluptatem nisi numquam magni nihil doloremque aut rem veniam ipsam!</p>
+            </div><!--panel-->
+        </div><!--content1-->
+
+        <div class="ultimas-atividades">
+            <div class="atividades-topo">
+                <h2>Últimas atividades</h2>
+            </div><!--atividades-topo-->
+            <br>
+            <div class="atividades-registro">
+                <div class="circle-atividades"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida</p>
+            </div><!--atividas-registro-->
+            
+            <div class="atividades-registro">
+                <div class="circle-atividades"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida</p>
+            </div><!--atividas-registro-->
+           
+            <div class="atividades-registro">
+                <div class="circle-atividades"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida</p>
+            </div><!--atividas-registro-->
+        </div><!--ultimas-atividades-->
+
     </div><!--main-content-->
+
     <div class="clear"></div><!--clear-->
 
+<script src="js/jquery-3.6.4.min.js"></script>
+<script>
+    $(function(){
+        var windowWidth = $(window)[0].innerWidth;
+        if(windowWidth <= 768){
+        console.log(windowWidth);
+        $('.nome-usuario h2').click(function(){
+            var el = $('.sidebar');
+            if(el.is(':visible'))
+            {
+                el.hide();
+                $('.main-content').css('left','0')
+            }else{
+                el.show();
+                $('.main-content').css('left','300px')
+            }
+        })
+    }
+    $(window).resize(function(){
+        windowWidth = $(window)[0].innerWidth;
+    })
+    })
+</script>
 
 </body>
-
 </html>

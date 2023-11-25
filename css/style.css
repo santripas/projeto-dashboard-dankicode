@@ -60,8 +60,9 @@ div.main-content{
 }
 
 header {
+    height: 90px;
     background: white;
-    padding: 20px;
+    padding: 20px 15px;
     border-bottom: 2px solid #ccc; 
 }
 
@@ -101,4 +102,130 @@ header {
 
 .pesquisa-campo input[type=text]:focus{
     outline: 0;
+}
+
+.icone-alerta{
+    cursor: pointer;
+    background: #FBEDEF;
+    width: 30px;
+    height: 30px;
+    margin-right: 28px;
+    float: right;
+    text-align: center;
+    position: relative;
+}
+
+.icone-alerta p{
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    display: inline-block;
+    background: #ED7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.icone-alerta i{
+    line-height: 30px;
+    font-size: 18px;
+    color: #ED7387;
+    font-weight: bold;
+}
+
+.nome-usuario{
+    float: left;
+}
+
+.nome-usuario h2{
+    margin-top: 8px;
+    font-weight: normal;
+    font-size: 23px;
+    color: #A7A7A7;
+    cursor: pointer;
+}
+
+.content1{
+    float: left;
+    width: 80%;
+    padding: 30px;
+    overflow-y: auto;
+    height: calc(100% - 90px);
+}
+
+.panel{
+    margin-bottom: 10px;
+    padding: 30px;
+    width: 100%;
+    float: left;
+    border: 2px solid #EBEBEB;
+    background: white;
+}
+
+.panel h2{
+    color: #7F7F7F;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.panel p{
+    font-size: 17px;
+    color: #B2B2B2;
+    margin-top: 10px;
+}
+
+.ultimas-atividades{
+    width: 20%;
+    background: #EAEBEB;
+    padding: 20px 40px;
+    float: left;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+
+.atividades-topo h2{
+    color: #7F7F7F;
+    font-size: 23px;
+    font-weight: normal;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.atividades-registro{
+    position: relative;
+    padding: 15px 10px;
+    border-left: 1px solid #BBBBBB;
+}
+
+.circle-atividades{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #E9EBEB;
+    border: 1px solid #CCCCCC;
+}
+
+.atividades-registro h2{
+    color: #BBBBBB;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.atividades-registro p{
+    color: #B2B2B2;
+    font-size: 15px;   
+}
+
+@media screen and (max-width: 768px) {
+    .ultimas-atividades{display: none;}
+    .content1{width: 100%;}
+    .panel{width: 100% !important;}
+    .sidebar{display: none;position: relative;z-index: 9999;}
+    div.main-content{
+        width: 100%;
+        position: absolute;left: 0;top: 0;
+    }
 }
